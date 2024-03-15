@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro'
+import tailyUI from 'taily-ui'
+---
+
+<Layout
+    title="Welcome to Brodly"
+    description="Stylish, modern, high-secure and fully anonymous live streaming platform."
+>
+    <main class="select-none overflow-hidden">
+        <fragment
+            set:html={tailyUI.OpenSourcePromo({
+                logo: '/favicon.svg',
+                title: 'Brodly',
+                color: 'warning',
+                text: [
+                    { type: 'default', value: 'Share' },
+                    { type: 'primary', value: 'beautiful' },
+                    {
+                        type: 'default',
+                        value: 'moments of your life to everyone with customizable real-time'
+                    },
+                    { type: 'secondary', value: 'broadcasts' }
+                ],
+                description: 'Stylish, modern, high-secure and fully anonymous live streaming platform.',
+                button: {
+                    title: 'Start broadcast',
+                    link: '/'
+                },
+                github: 'https://github.com/nikdelvin/brodly',
+                images: ['/main-1.png', '/main-2.png', '/main-3.png']
+            })}
+        />
+    </main>
+</Layout>
