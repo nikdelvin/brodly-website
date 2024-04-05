@@ -30,5 +30,22 @@ import tailyUI from 'taily-ui'
                 github: 'https://github.com/nikdelvin/brodly'
             })}
         />
+        <fragment
+            id="kpi"
+            set:html={tailyUI.KPICards({
+                title: 'Capture moments with',
+                color: 'warning',
+                cards: [
+                    { title: '30+', description1: 'customization', description2: 'themes' },
+                    { title: '2-4', description1: 'streamers', description2: 'broadcasts' },
+                    { title: '100', description1: 'percent safe', description2: 'meetings' },
+                    { title: 'Chat', description1: 'with smart AI', description2: 'moderation' }
+                ],
+                button: {
+                    title: 'Take a shot',
+                    link: '/'
+                }
+            })}
+        />
     </main>
 </Layout>
