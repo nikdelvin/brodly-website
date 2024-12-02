@@ -61,6 +61,56 @@ const colorTheme =
             })}
         />
         <fragment
+            id="features"
+            set:html={tailyUI.FeatureCards({
+                title: 'Secured & sealed',
+                color: colorTheme,
+                reverse: false,
+                featureTitle: 'Streams',
+                featureDescription: [
+                    { type: 'default', value: 'For' },
+                    { type: 'primary', value: 'everyone' },
+                    { type: 'default', value: 'who need' },
+                    { type: 'primary', value: 'anonymity' },
+                    { type: 'default', value: 'in Web' }
+                ],
+                featureOptions: [
+                    'Protection from IP, browser fingerprint & cookies tracking. Personal information free auth process',
+                    'Powered with two-side encrypted SHA-512 hashing algorithm applyed to stream video and audio data, messages, events, donations, hosts & viewers info',
+                    'Zero-trail no-storage data transfer protocol which erase everything after stream or broadcast ends'
+                ],
+                button: {
+                    title: 'Generate hash',
+                    link: '#features_2'
+                }
+            })}
+        />
+        <fragment
+            id="features_2"
+            set:html={tailyUI.FeatureCards({
+                title: 'Customize broadcast',
+                color: colorTheme,
+                reverse: true,
+                featureTitle: 'For yourself',
+                featureDescription: [
+                    { type: 'default', value: 'With 30' },
+                    { type: 'secondary', value: 'colorful' },
+                    { type: 'default', value: 'themes & 9' },
+                    { type: 'secondary', value: 'unique' },
+                    { type: 'default', value: 'sticker packs' }
+                ],
+                featureOptions: [
+                    'Carefully prepared 30 color themes with video loop backgrounds & a copyright-free library of lo-fi music',
+                    'Make your chat look unique with 9 different sticker packs for your viewers or using an integrated pixel art tool to create your personal sticker pack',
+                    'Customize stream in realtime using build-in redactor, connect more friends & drag their webcam boxes'
+                ],
+                button: {
+                    title: 'Randomize theme',
+                    link: '#stages'
+                }
+            })}
+        />
+        <fragment
             id="footer"
             set:html={tailyUI.Footer({
                 color: colorTheme,
@@ -226,7 +276,7 @@ const colorTheme =
                             { type: 'primary', value: 'Libraries:' },
                             {
                                 type: 'default',
-                                value: 'Bootstrap, Tailwind, Formik, Redux, Recoil, MUI, Framer, Three JS'
+                                value: 'Bootstrap, Tailwind, Formik, Redux, Recoil, GSAP, Framer, Three.JS'
                             },
                             { type: 'default', value: '<div style="padding:8px;"></div>' },
                             { type: 'default', value: 'And more other deeply learned' },
