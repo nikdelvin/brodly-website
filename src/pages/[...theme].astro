@@ -5,6 +5,23 @@ import * as tailyUI from 'taily-ui'
 const month = new Date().getMonth()
 const day = new Date().getDate()
 const year = new Date().getFullYear()
+const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+]
+function getDate(date: Date) {
+    return [date.getDate().toString(), monthNames[date.getMonth()], date.getFullYear().toString()]
+}
 export async function getStaticPaths() {
     return [undefined, 'default', 'primary', 'secondary', 'success', 'warning', 'error', 'ghost'].map((theme) => ({
         params: { theme }
@@ -76,7 +93,7 @@ const colorTheme =
                 ],
                 featureOptions: [
                     'Protection from IP, browser fingerprint & cookies tracking. Personal information free auth process',
-                    'Powered with two-side encrypted SHA-512 hashing algorithm applyed to stream video and audio data, messages, events, donations, hosts & viewers info',
+                    'Powered with two-side encrypted SHA-512 hashing algorithm applied to stream video and audio data, messages, events, donations, hosts & viewers info',
                     'Zero-trail no-storage data transfer protocol which erase everything after stream or broadcast ends'
                 ],
                 button: {
@@ -108,6 +125,80 @@ const colorTheme =
                     title: 'Randomize theme',
                     link: '#stages'
                 }
+            })}
+        />
+        <fragment
+            id="stages"
+            set:html={tailyUI.Jobs({
+                title: 'Project roadmap',
+                color: colorTheme,
+                jobs: [
+                    {
+                        from: getDate(new Date()),
+                        to: getDate(new Date(Date.now() + 3 * 30 * 24 * 60 * 60 * 1000)),
+                        title: 'Phase I: Web privacy jailbreak',
+                        description: [
+                            { type: 'default', value: 'Secured,' },    
+                            { type: 'primary', value: 'zero-cookies' },
+                            { type: 'default', value: 'browser' },
+                            { type: 'primary', value: 'fingerprint' }
+                        ],
+                        role: [
+                            'Zero-cookies browser policy will block cookie-based tracking and ensure deletion of any script that attempts to set cookies on site', 
+                            'Browser fingerprint obfuscation will generate user-agent strings, modify canvas f-print parameters, and suppress WebGL f-printing', 
+                            'Personal information-free auth eliminates the need for email or other private data by utilizing cryptographic tokens for users auth'
+                        ]
+                    },
+                    {
+                        from: getDate(new Date(Date.now() + (3 * 30 + 1) * 24 * 60 * 60 * 1000)),
+                        to: getDate(new Date(Date.now() + (6 * 30 + 1) * 24 * 60 * 60 * 1000)),
+                        title: 'Phase II: Data stream encryption',
+                        description: [
+                            { type: 'default', value: 'Two-side SHA-512' },      
+                            { type: 'primary', value: 'hashing' },
+                            { type: 'default', value: 'for every' },
+                            { type: 'primary', value: 'byte' }
+                        ],
+                        role: [
+                            "Two-sided SHA-512 hashing processes data on sender and receiver, ensuring that each byte is encrypted before transmission", 
+                            'Multimedia streaming encryption ensures that all relevant data types (messages, events, donation information) are secured', 
+                            'Regular security audits on encryption features to identify any potential vulnerabilities or points of failure in the hashing process'
+                        ]
+                    },
+                    {
+                        from: getDate(new Date(Date.now() + (6 * 30 + 2) * 24 * 60 * 60 * 1000)),
+                        to: getDate(new Date(Date.now() + (9 * 30 + 2) * 24 * 60 * 60 * 1000)),
+                        title: 'Phase III: AES-secured messaging',
+                        description: [
+                            { type: 'default', value: 'Backtracking' },     
+                            { type: 'primary', value: 'protected' },
+                            { type: 'default', value: 'messages &' },
+                            { type: 'primary', value: 'chats' }
+                        ],
+                        role: [
+                            'AES-256 encryption for messaging evaluates encryption effectivity, focusing on speed, reliability & security against potential attacks', 
+                            "Backtracking protection mechanisms (ephemeral keys, message nonce) ensure that messages can't be retroactively decrypted", 
+                            'No-storage data transfer protocol guarantees zero-trail by ensuring that messages are not stored on servers by end of communication'
+                        ]
+                    },
+                    {
+                        from: getDate(new Date(Date.now() + (9 * 30 + 3) * 24 * 60 * 60 * 1000)),
+                        to: getDate(new Date(Date.now() + (12 * 30 + 3) * 24 * 60 * 60 * 1000)),
+                        title: 'Phase IV: Themes & customization',
+                        description: [
+                            { type: 'default', value: 'New way to' },        
+                            { type: 'primary', value: 'make' },
+                            { type: 'default', value: 'stream' },
+                            { type: 'primary', value: 'experience' },
+                            { type: 'default', value: 'unique' }
+                        ],
+                        role: [
+                            'Customization includes 30 carefully designed color themes with video loop backgrounds and a copyright-free library of lo-fi music', 
+                            'Sticker Art Tool integrates an intuitive solution allowing users to create personalized sticker packs or use one of 9 prepared packs', 
+                            'Robust real-time editor for stream customization, enabling drag-and-drop live adjustments to themes, layouts, assets & cam boxes'
+                        ]
+                    }
+                ]
             })}
         />
         <fragment
@@ -325,3 +416,23 @@ const colorTheme =
         />
     </main>
 </Layout>
+<style is:global>
+    :root::-webkit-scrollbar {
+        display: none !important;
+    }
+    :root::-webkit-scrollbar-thumb {
+        background-color: transparent !important;
+    }
+    :root::-webkit-scrollbar-track {
+        background-color: transparent !important;
+    }
+    .overflow-x-scroll::-webkit-scrollbar {
+        display: none !important;
+    }
+    .overflow-x-scroll::-webkit-scrollbar-thumb {
+        background-color: transparent !important;
+    }
+    .overflow-x-scroll::-webkit-scrollbar-track {
+        background-color: transparent !important;
+    }
+</style>
