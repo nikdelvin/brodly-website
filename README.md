@@ -1,42 +1,55 @@
-# Brodly
+# 📡 Brodly
 
-**Share beautiful moments of your life with everyone with customizable real-time broadcasts.**
+> Share beautiful moments of your life with everyone with customizable real-time broadcasts
 
 A stylish, modern, high-security, and fully anonymous live streaming platform for the web.
 
-🔗 **Live Demo:** [https://brodly.app.nikdelv.in](https://brodly.app.nikdelv.in)
+[![Live Website](https://img.shields.io/badge/🌐_Live-brodly.by.nikdelv.in-success)](https://brodly.by.nikdelv.in)
+[![App](https://img.shields.io/badge/🚀_App-brodly.app.nikdelv.in-primary)](https://brodly.app.nikdelv.in)
+[![GitHub](https://img.shields.io/badge/GitHub-nikdelvin/brodly-blue)](https://github.com/nikdelvin/brodly)
 
-## ✨ Key Features
+## 🌟 Overview
 
-### 🎨 Capture Moments With
+Brodly is an innovative live streaming platform that combines:
 
-- **30 Color Themes** - Beautifully crafted color overlays for your streams
-- **1-4 Streamers** - Broadcast solo or with up to 3 friends simultaneously
-- **100% Safe** - Military-grade encryption ensures your privacy
-- **Smart Chat** - Intelligent moderation system for meaningful conversations
+- 🎨 **30 Color Themes** - Beautifully crafted color overlays for your streams
+- 👥 **Multi-Streamer Support** - Broadcast solo or with up to 3 friends simultaneously
+- 🔒 **Military-Grade Security** - Zero tracking, anonymous auth, and full encryption
+- 💬 **Smart Chat** - Intelligent moderation system for meaningful conversations
 
-### 🔒 Security & Privacy First
+## ✨ Features
 
-#### Streams for Everyone Who Needs Anonymity
+### Capture Moments With Style
 
-- **Zero Tracking:** Protection from IP tracking, browser fingerprint detection, and cookie-based tracking
-- **Personal Information-Free Auth:** Authenticate without email or personal data using cryptographic tokens
-- **Two-Way Encryption:** SHA-512 hashing applied to all stream data (video, audio, messages, events, donations, and viewer information)
-- **Zero-Trail Protocol:** All data is erased after your stream ends—nothing is stored permanently
+Share your experiences with powerful streaming tools:
 
-### 🎭 Customize Your Broadcast
+- **30 Colorful Themes**: Carefully designed themes with video loop backgrounds and copyright-free lo-fi music library
+- **1-4 Streamers**: Broadcast solo or collaborate with up to 3 friends in real-time
+- **Smart Chat**: Intelligent moderation system keeps conversations meaningful and safe
+- **Real-Time Editor**: Customize your stream on-the-fly, add friends, and rearrange webcam boxes dynamically
 
-#### Make Your Experience Unique
+### Security & Privacy First
 
-- **30 Colorful Themes:** Carefully designed themes with video loop backgrounds and copyright-free lo-fi music library
-- **9 Unique Sticker Packs:** Use pre-made sticker packs or create your own with the integrated pixel art tool
-- **Real-Time Editor:** Customize your stream on-the-fly with built-in redactor, add friends, and rearrange webcam boxes dynamically
+Streams for everyone who needs anonymity:
 
-## 🚀 Project Roadmap
+- **Zero Tracking**: Protection from IP tracking, browser fingerprint detection, and cookie-based tracking
+- **Anonymous Authentication**: Authenticate without email or personal data using cryptographic tokens
+- **Two-Way Encryption**: SHA-512 hashing applied to all stream data (video, audio, messages, events, donations)
+- **Zero-Trail Protocol**: All data is erased after your stream ends—nothing is stored permanently
 
-### Phase I: Web Privacy Jailbreak
+### Customize Your Broadcast
 
-**Timeline:** Next 3 months
+Make your experience unique:
+
+- **9 Unique Sticker Packs**: Use pre-made sticker packs or create your own with the integrated pixel art tool
+- **Dynamic Layouts**: Drag-and-drop interface for arranging multiple webcam feeds
+- **Live Editing**: Adjust themes, music, and layout without interrupting your stream
+
+## 🗺️ Project Roadmap
+
+### Phase I: Web Privacy Jailbreak (Current)
+
+**Timeline**: Next 3 months
 
 - Zero-cookies browser policy blocking cookie-based tracking
 - Browser fingerprint obfuscation (user-agent generation, canvas parameter modification, WebGL suppression)
@@ -44,7 +57,7 @@ A stylish, modern, high-security, and fully anonymous live streaming platform fo
 
 ### Phase II: Data Stream Encryption
 
-**Timeline:** Months 3-6
+**Timeline**: Months 3-6
 
 - Two-sided SHA-512 hashing for every byte of data
 - Multimedia streaming encryption (messages, events, donations)
@@ -52,7 +65,7 @@ A stylish, modern, high-security, and fully anonymous live streaming platform fo
 
 ### Phase III: AES-Secured Messaging
 
-**Timeline:** Months 6-9
+**Timeline**: Months 6-9
 
 - AES-256 encryption for all messaging
 - Backtracking protection (ephemeral keys, message nonce)
@@ -60,101 +73,126 @@ A stylish, modern, high-security, and fully anonymous live streaming platform fo
 
 ### Phase IV: Themes & Customization
 
-**Timeline:** Months 9-12
+**Timeline**: Months 9-12
 
 - 30 color themes with video backgrounds and lo-fi music library
 - Sticker Art Tool for personalized sticker pack creation
 - Robust real-time editor for drag-and-drop stream customization
 
-## 🛠️ Getting Started
+## 🛠️ Tech Stack
+
+- **Framework**: [Astro](https://astro.build) - Modern static site generator
+- **Styling**: [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- **Real-time Communication**: WebSocket API
+- **Security**: SHA-512 hashing, AES-256 encryption (roadmap)
+- **Language**: TypeScript - Type-safe JavaScript
+- **Deployment**: Firebase Hosting
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 16+ and npm/yarn/pnpm
+- Node.js (latest LTS version recommended)
+- npm or yarn package manager
 
 ### Installation
 
-1. Clone the repository:
+```bash
+# Clone the repository
+git clone https://github.com/nikdelvin/brodly-website.git
+cd brodly-website
 
-    ```bash
-    git clone https://github.com/nikdelvin/brodly.git
-    cd brodly
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-3. Run the development server:
-
-    ```bash
-    npm run dev
-    ```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+# Install dependencies
+npm install
+```
 
 ### Development
 
-- Edit the main page by modifying `src/app/page.tsx`
-- The app will automatically reload as you make changes
-- WebSocket API endpoint: `src/pages/api/ws/index.ts`
+```bash
+# Start development server with linting and formatting
+npm run start
+
+# Or just run Astro dev server
+npm run dev
+```
+
+The site will be available at `http://localhost:4321`
+
+### Build
+
+```bash
+# Build for production (includes linting and type checking)
+npm run build
+
+# Preview production build
+npm run preview
+```
 
 ## 📁 Project Structure
 
-```markdown
-brodly/
+```text
+brodly-website/
+├── public/                     # Static assets (favicons)
 ├── src/
-│ ├── app/
-│ │ ├── layout.tsx # App layout
-│ │ ├── page.tsx # Home page
-│ │ └── globals.css # Global styles
-│ ├── icons/
-│ │ └── brodly.tsx # Brodly logo component
-│ └── pages/
-│ └── api/
-│ └── ws/
-│ └── index.ts # WebSocket API
-├── public/ # Static assets
-├── next.config.js # Next.js configuration
-├── tailwind.config.ts # Tailwind CSS configuration
-└── package.json
+│   ├── layouts/                # Astro layout components
+│   │   └── Layout.astro
+│   └── pages/                  # Page routes
+│       └── [...theme].astro    # Dynamic theme pages
+├── astro.config.mjs            # Astro configuration
+├── tailwind.config.ts          # Tailwind CSS configuration
+├── tsconfig.json               # TypeScript configuration
+└── package.json                # Dependencies and scripts
 ```
 
-## 🔧 Tech Stack
+## 🎨 Available Themes
 
-- **Framework:** [Next.js](https://nextjs.org/) - React framework for production
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- **Real-time Communication:** WebSocket API
-- **Security:** SHA-512 hashing, AES-256 encryption (roadmap)
+The website supports multiple color themes:
 
-## 📚 Learn More
+- Default
+- Primary
+- Secondary
+- Success
+- Warning
+- Error
+- Ghost
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Socket.IO Documentation](https://socket.io/docs/)
+Access different themes via URL: `https://brodly.by.nikdelv.in/[theme-name]`
 
-## 🚢 Deployment
+## 📜 Available Scripts
 
-The easiest way to deploy is using [Vercel](https://vercel.com/):
+| Command            | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| `npm run start`    | Formats, lints, and starts dev server                  |
+| `npm run build`    | Formats, lints, type-checks, and builds for production |
+| `npm run preview`  | Preview production build locally                       |
+| `npm run eslint`   | Run ESLint on TypeScript and Astro files               |
+| `npm run prettier` | Format all files with Prettier                         |
+| `npm run upgrade`  | Clean install all dependencies                         |
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Vercel will automatically build and deploy your app
+## 👨‍💻 Creator
 
-See [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Created by [Nikita Stadnik](https://nikdelv.in) - Passionate Fullstack Web Developer
+
+- 📧 Email: [the@nikdelv.in](mailto:the@nikdelv.in)
+- 🐙 GitHub: [@nikdelvin](https://github.com/nikdelvin)
+- 💼 LinkedIn: [@nikdelvin](https://www.linkedin.com/in/nikdelvin)
+
+## 🔗 Related Projects
+
+- [TailyUI](https://tailyui.by.nikdelv.in) - Modern UI Library built with pure Tailwind CSS
+- [Feelicy](https://feelicy.by.nikdelv.in) - Self-improvement platform with meditation and habit tracking
+- [Scientry](https://scientry.by.nikdelv.in) - Data management & visualization tool
+- [Scripty](https://scripty.by.nikdelv.in) - Practice-oriented educational platform to learn JavaScript
+- [Neuroly](https://neuroly.by.nikdelv.in) - STT and voice synthesis AI chatbot
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the terms specified in the [LICENSE](./LICENSE) file.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit pull requests and open issues for bugs or feature requests.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/nikdelvin/brodly-website/issues).
 
-## 📞 Support
+---
 
-For questions or support, please open an issue on [GitHub](https://github.com/nikdelvin/brodly/issues).
-
-**Made with ❤️ by [nikdelvin](https://github.com/nikdelvin)**
+**Start broadcasting today!** 📡 Visit [brodly.by.nikdelv.in](https://brodly.by.nikdelv.in)
